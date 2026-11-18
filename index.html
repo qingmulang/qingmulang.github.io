@@ -24,6 +24,20 @@
   .lang { padding-top: 4px; }
   .lang + .lang { border-top: 1px solid #e5e5ea; margin-top: 44px; padding-top: 8px; }
   :target { scroll-margin-top: 16px; }
+
+  /* iPad / 桌面：iOS 系统里 iPad 的视距比 iPhone 远约 10cm，同一 15px 正文在平板上
+     张角更小、明显"偏小"。按 Apple 自家网页的排版惯例，宽视口把正文提到 17px、
+     标题同步升一档，卡片略微加宽并用更舒展的内边距，长文阅读不显局促。
+     手机（<700px）完全不受影响，保持原 15px。 */
+  @media (min-width: 700px) {
+    body { padding: 40px 24px; }
+    .card { max-width: 840px; padding: 44px 48px; }
+    h1 { font-size: 30px; }
+    h2 { font-size: 22px; margin: 34px 0 10px; }
+    .meta { font-size: 15px; }
+    p, li { font-size: 17px; }
+    .lang-nav a { font-size: 14px; padding: 8px 14px; }
+  }
 </style>
 </head>
 <body>
